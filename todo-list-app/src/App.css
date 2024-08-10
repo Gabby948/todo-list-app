@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -6,21 +7,19 @@
 }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   background-color: #f4f4f4;
   color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-/* Container*/
 .container {
   background-color: #fff;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   width: 400px;
@@ -28,22 +27,21 @@ body {
   text-align: center;
 }
 
-
 h1 {
-  font-size: 2rem;
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
   color: #333;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
-/* Input*/
-
 input[type="text"] {
-  width: calc(100% - 20px);
-  padding: 18px;
-  margin-bottom: 15px;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
@@ -52,25 +50,46 @@ input[type="text"]:focus {
   outline: none;
 }
 
-/* Button*/
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
 
 button {
-  width: 100%;
+  flex: 1;
   padding: 12px;
+  margin: 0 5px;
   background-color: #28a745;
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: 600;
 }
 
 button:hover {
   background-color: #218838;
 }
 
-/*List*/
+button:first-child {
+  margin-left: 0;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+button.delete {
+  background-color: #dc3545;
+}
+
+button.delete:hover {
+  background-color: #7a0a16;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -86,6 +105,7 @@ li {
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease;
+  font-size: 1rem;
 }
 
 li:hover {
@@ -95,20 +115,4 @@ li:hover {
 li.completed {
   text-decoration: line-through;
   color: #440808;
-}
-
-/*Delete Button*/
-
-button.delete {
-  background-color: #dc3545;
-  border: none;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button.delete:hover {
-  background-color: #7a0a16;
 }
